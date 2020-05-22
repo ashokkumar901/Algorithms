@@ -1,7 +1,7 @@
 //BubbleSort Algorithm
 //Time Complexity = OmegA(n)(Best CAse) || O(n^2)(Worst CAse)
 let BubbleSort = (A) => {
-    let n = A.length - 1;
+    let n = A.length;
     let swapped;
     for (let i = 0; i < n; i++) {
         swapped = 0;
