@@ -10,7 +10,6 @@ let CountingSort = (A) => {
             helper[A[i]] = 1;
         }
     }
-    console.log(helper);
     let newArr = [];
     for (let i in helper) {
         while (helper[i] > 0) {
