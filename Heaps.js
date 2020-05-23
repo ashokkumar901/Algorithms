@@ -36,6 +36,9 @@ let BuildMaxHeap = (A) => {
 //HeapSort algorithm
 //Time Complexity = O(nlogn) Space complexity = O(1)
 let HeapSort = (A) => {
+    if (A.length === 0) {
+        return A;
+    }
     BuildMaxHeap(A);
     let heapSize = A.length;
     for (let i = A.length - 1; i >= 1; i--) {

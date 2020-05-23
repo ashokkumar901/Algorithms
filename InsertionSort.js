@@ -3,6 +3,9 @@
 //Space Complexity = O(1) also called as inplace algorithm because no extra space is required
 
 let InsertionSort = (A) => {
+    if (A.length === 0) {
+        return A;
+    }
     for (let i = 1; i < A.length; i++) {
         let key = A[i];
         let j = i - 1;
@@ -15,4 +18,5 @@ let InsertionSort = (A) => {
     return A;
 }
 
-console.log(InsertionSort([9, 8, 7, 6, 5, 4, 3, 2, 1]))
+console.log(InsertionSort([9, 8, 7, 6, 5, 4, 3, 2, 1]));
+module.exports = { InsertionSort };

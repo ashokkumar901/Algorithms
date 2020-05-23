@@ -32,6 +32,9 @@ let Merge = (A, p, q, r) => {
 
 //MergeSort Algorithm
 let MergeSort = (A, p, r) => {
+    if (A.length === 0) {
+        return A;
+    }
     p = p || 1;
     r = r || A.length;
     let q = Math.floor((p + r) / 2);

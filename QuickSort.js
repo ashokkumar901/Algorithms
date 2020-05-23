@@ -25,6 +25,9 @@ let Partition = (A, p, r) => {
 
 // Quick sort algorithm
 let QuickSort = (A, p = 0, r = A.length - 1) => {
+    if (A.length === 0) {
+        return A;
+    }
     if (p < r) {
         let q = Partition(A, p, r);
         QuickSort(A, p, q - 1);
