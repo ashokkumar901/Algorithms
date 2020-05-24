@@ -6,10 +6,14 @@ const HeapSort = require('../Sorting Algorithms/MinHeap');
 let KnapSackGreedy = (profitAndWeights, m) => {
     let maxProfit = 0;
     let lastElement;
+    //For loop to get the profit by weight ratio of each object
     for (let i = 0; i < profitAndWeights.length; i++) {
         profitAndWeights[i]['pwRatio'] = profitAndWeights[i]['profit'] / profitAndWeights[i]['weight'];
     }
+    //Sort the outputArray by profit by weight ratio in decreasing order
     HeapSort.HeapSort(profitAndWeights);
+
+    //Be greedy about profit by weight ratio and place the objects accordingly to get the max profit
     for (let j = 0; j < profitAndWeights.length; j++) {
         if (m > 0 && profitAndWeights[j]['weight'] <= m) {
             m = m - profitAndWeights[j]['weight'];
@@ -26,6 +30,7 @@ let KnapSackGreedy = (profitAndWeights, m) => {
     return maxProfit;
 }
 
+//Test the algorithm with inputs
 console.log(KnapSackGreedy([{ "profit": 2, "weight": 1 }, { "profit": 28, "weight": 4 },
 { "profit": 25, "weight": 5 }, { "profit": 18, "weight": 3 }, { "profit": 9, "weight": 3 }], 15));
 
